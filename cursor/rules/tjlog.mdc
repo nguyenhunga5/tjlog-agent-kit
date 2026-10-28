@@ -26,6 +26,11 @@ Sessions hold millions of rows, so start from summaries and narrow before you re
 - `get_context` — the rows around one `seq` from a search; `sameProcess: true` keeps to that app.
 - `list_crash_reports` / `get_crash_report` — iPhone and iPad sessions. Read `frames` (the crashed thread)
   first; `raw` is the `.ips` text, cut at `maxChars`.
+- `symbolicate_crash_report` — when a report's `symbols.needsDSYM` is true (a release build's frames show only
+  offsets). Call it once without `dsymPaths`: TJLog searches Spotlight like Xcode does. If it still needs a
+  dSYM, tell the user `symbols.howTo` — it names the app, version and UUID to fetch from their CI build — and
+  wait. When they give a path (a `.dSYM`, folder, `.xcarchive` or the CI `.zip`), call it again with
+  `dsymPaths`. A dSYM from another build is refused by UUID; relay that and ask for the right one.
 - `list_alerts` — what TJLog flagged during a capture: new error patterns, restarts of watched apps, bursts.
 - `export` — `markdownReport` for a write-up the user can keep; `log`/`jsonl`/`csv` for rows. Large exports
   come back as a file path.

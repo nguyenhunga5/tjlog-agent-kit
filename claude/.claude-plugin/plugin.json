@@ -1,6 +1,6 @@
 {
   "name": "tjlog",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Read and run TJLog captures from Claude Code: macOS and iPhone logs, crashes, restarts, live tails.",
   "author": { "name": "Hung Nguyen Thanh" }
 }
