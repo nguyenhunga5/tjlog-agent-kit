@@ -1,0 +1,16 @@
+{
+  "name": "tjlog-agent-kit",
+  "owner": {
+    "name": "Hung Nguyen Thanh"
+  },
+  "plugins": [
+    {
+      "name": "tjlog",
+      "source": "./claude",
+      "description": "Read and run TJLog captures from Claude Code: macOS and iPhone logs, crashes, restarts, live tails."
+    }
+  ],
+  "metadata": {
+    "description": "Skill pack and client configs for TJLog's MCP server"
+  }
+}
