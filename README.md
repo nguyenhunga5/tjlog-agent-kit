@@ -69,7 +69,7 @@ Scripts can use a token from Settings → MCP → New Token for a Script…, sen
 
 Edit `shared/SKILL.md` only, then run `sh scripts/sync.sh` and commit the generated files with it.
 
-Tested with TJLog 1.1 (dSYM symbolication: TJLog with symbolicate_crash_report).
+Tested with TJLog 1.1. The dSYM steps need a TJLog that lists `symbolicate_crash_report`.
 
 ## License
 
