@@ -59,6 +59,9 @@ ones you started.
 - Messages may contain `«redacted»` (tokens, passwords, emails, home folder names): TJLog hid them on purpose.
 - `truncated: true` with `messageLength` means the message was cut; ask `get_context` for that row.
 - Times are UTC (`Z`); say the user's local time when you can.
+- A running capture stores its rows in waves, so its newest rows can be up to `storeDelaySeconds` (about 0.5 s)
+  late; replies then carry `liveNote`. When the user has just reproduced something, wait a second before
+  searching, or follow it with `tail_logs`.
 - When you report "no errors", say over which rows and time span, and mention errors outside it, such as at
   the app's launch.
 - If a call says the user must turn something on in TJLog, relay that sentence and wait.
